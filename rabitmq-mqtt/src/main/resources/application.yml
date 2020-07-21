@@ -1,0 +1,28 @@
+---
+server:
+  port: 8023
+spring:
+  #给项目来个名字
+  application:
+    name: rabbitmq-mqtt
+  #配置rabbitMq 服务器
+  rabbitmq:
+    host: 47.97.211.150
+    port: 5672
+    username: guest
+    password: guest
+  #MQTT-用户名
+  mqtt:
+    username: mqtt-test
+    password: mqtt-test
+    #MQTT-服务器连接地址，如果有多个，用逗号隔开，如：tcp://127.0.0.1:1883，tcp://192.168.2.133:1883
+    url: tcp://47.97.211.150:1883
+    #MQTT-连接服务器默认客户端ID
+    client:
+      id: mqttId2134
+    #MQTT-默认的消息推送主题，实际可在调用接口时指定
+    default:
+      #订阅主题，多个用‘,’隔开，如：topic,topic1
+      topic: topic,topic1
+    #连接超时
+    completionTimeout: 3000

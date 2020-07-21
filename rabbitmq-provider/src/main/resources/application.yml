@@ -1,0 +1,18 @@
+---
+#端口
+server:
+ port: 8021
+spring:
+  #给项目来个名字
+  application:
+    name: rabbitmq-provider
+  #配置rabbitMq 服务器
+  rabbitmq:
+    host: 47.97.211.150
+    por: 5672
+    username: root
+    password: root
+    #确认消息已发送到交换机(Exchange)
+    publisher-confirm-type: correlated
+    #确认消息已发送到队列(Queue)
+    publisher-returns: true
